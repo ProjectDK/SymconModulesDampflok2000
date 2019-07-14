@@ -2,7 +2,7 @@
     "elements":
     [
         {"type": "Label", "label": "Müllarten auswählen:" },
-        {"type": "CheckBox", "name": "cbxGS", "caption": "Gelber Sack" },
+        {"type": "CheckBox", "name": "cbxGS", "caption": "Schadstoffmobil" },
         {"type": "CheckBox", "name": "cbxHM", "caption": "Hausmüll"},
         {"type": "CheckBox", "name": "cbxPP", "caption": "Baumschnitt"},
         {"type": "CheckBox", "name": "cbxBO", "caption": "Bio"},

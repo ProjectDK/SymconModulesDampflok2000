@@ -57,7 +57,7 @@
 
             If ($this->ReadPropertyBoolean("cbxGS"))
             {
-                $this->RegisterVariableString("YellowBagTimes", "Gelber Sack", "~TextBox");
+                $this->RegisterVariableString("YellowBagTimes", "Schadstoffmobil", "~TextBox");
                 $this->EnableAction("YellowBagTimes");
             }
             Else
@@ -180,7 +180,7 @@
 
             If ($this->ReadPropertyBoolean("cbxGS")) {
                 $arrGS = explode("\n", $strGS);
-                $nextTermine['Gelber Sack'] = closest($arrGS, new DateTime('today midnight'));
+                $nextTermine['Schadstoffmobil'] = closest($arrGS, new DateTime('today midnight'));
             }
             If ($this->ReadPropertyBoolean("cbxHM")) {
                 $arrHM = explode("\n", $strHM);
