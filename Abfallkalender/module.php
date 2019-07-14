@@ -75,7 +75,7 @@
             }
             If ($this->ReadPropertyBoolean("cbxPP"))
             {
-                $this->RegisterVariableString("PaperTimes", "Pappe", "~TextBox");
+                $this->RegisterVariableString("PaperTimes", "Baumschnitt", "~TextBox");
                 $this->EnableAction("PaperTimes");
             }
             Else
@@ -129,7 +129,7 @@
                 $MailIsActive = false;
             }
             $AbfallTermineHTMLID = IPS_GetObjectIDByIdent("RestTimesHTML", $this->InstanceID);
-            
+
             function closest($dates, $findate)
             {
                 $newDates = array();
@@ -163,7 +163,7 @@
             $strHM = @GetValueString(IPS_GetObjectIDByIdent("WasteTimes", $this->InstanceID));
             $strPP = @GetValueString(IPS_GetObjectIDByIdent("PaperTimes", $this->InstanceID));
             $strBO = @GetValueString(IPS_GetObjectIDByIdent("BioTimes", $this->InstanceID));
-            
+
             If ((empty($strGS) && $this->ReadPropertyBoolean("cbxGS")) || (empty($strHM) && $this->ReadPropertyBoolean("cbxHM")) || (empty($strPP)) && $this->ReadPropertyBoolean("cbxPP") || (empty($strBO)) && $this->ReadPropertyBoolean("cbxBO"))
             {
                 $this->SetStatus(201);
@@ -175,7 +175,7 @@
             $now = new DateTime();
             $PushDiffTimeInterval = $now->diff($today);
             $PushDiffHours = $PushDiffTimeInterval->format('%h');
-            
+
             $nextTermine = array();
 
             If ($this->ReadPropertyBoolean("cbxGS")) {
@@ -188,15 +188,15 @@
             }
             If ($this->ReadPropertyBoolean("cbxPP")) {
                 $arrPP = explode("\n", $strPP);
-                $nextTermine['Pappe'] = closest($arrPP, new DateTime('today midnight'));
+                $nextTermine['Baumschnitt'] = closest($arrPP, new DateTime('today midnight'));
             }
             If ($this->ReadPropertyBoolean("cbxBO")) {
                 $arrBO = explode("\n", $strBO);
                 $nextTermine['Bio'] = closest($arrBO, new DateTime('today midnight'));
             }
-            
+
             asort($nextTermine);
-            
+
             $HTMLBox = "<table cellspacing='10'>";
             foreach ($nextTermine as $key => $value)
             {
