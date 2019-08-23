@@ -183,13 +183,13 @@
                 $arrHM = explode("\n", $strHM);
                 $nextTermine['Hausmüll'] = closest($arrHM, new DateTime('today midnight'));
             }
-            If ($this->ReadPropertyBoolean("cbxPP")) {
-                $arrPP = explode("\n", $strPP);
-                $nextTermine['Baumschnitt'] = closest($arrPP, new DateTime('today midnight'));
-            }
             If ($this->ReadPropertyBoolean("cbxBO")) {
                 $arrBO = explode("\n", $strBO);
                 $nextTermine['Bio'] = closest($arrBO, new DateTime('today midnight'));
+            }
+            If ($this->ReadPropertyBoolean("cbxPP")) {
+                $arrPP = explode("\n", $strPP);
+                $nextTermine['Baumschnitt'] = closest($arrPP, new DateTime('today midnight'));
             }
             If ($this->ReadPropertyBoolean("cbxGS")) {
                 $arrGS = explode("\n", $strGS);
