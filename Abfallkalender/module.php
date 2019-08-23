@@ -178,10 +178,7 @@
 
             $nextTermine = array();
 
-            If ($this->ReadPropertyBoolean("cbxGS")) {
-                $arrGS = explode("\n", $strGS);
-                $nextTermine['Schadstoffmobil'] = closest($arrGS, new DateTime('today midnight'));
-            }
+
             If ($this->ReadPropertyBoolean("cbxHM")) {
                 $arrHM = explode("\n", $strHM);
                 $nextTermine['Hausmüll'] = closest($arrHM, new DateTime('today midnight'));
@@ -193,6 +190,10 @@
             If ($this->ReadPropertyBoolean("cbxBO")) {
                 $arrBO = explode("\n", $strBO);
                 $nextTermine['Bio'] = closest($arrBO, new DateTime('today midnight'));
+            }
+            If ($this->ReadPropertyBoolean("cbxGS")) {
+                $arrGS = explode("\n", $strGS);
+                $nextTermine['Schadstoffmobil'] = closest($arrGS, new DateTime('today midnight'));
             }
 
             asort($nextTermine);
