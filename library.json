@@ -1,12 +1,12 @@
 {
     "id": "{49cf0d08-bd63-40a1-823d-f31919757509}",
-    "author": "dampflok2000",
+    "author": "ProjektDK",
     "name": "Symcon Modules",
-    "url": "https://github.com/dampflok2000/SymconModules",
+    "url": "https://github.com/ProjectDK/SymconModulesDampflok2000",
     "compatibility": {
         "version": "4.2"
     },
-    "version": "0.6",
+    "version": "0.8",
     "build": 0,
     "date": 0
 }
