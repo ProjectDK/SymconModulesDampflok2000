@@ -198,7 +198,7 @@
 
             asort($nextTermine);
 
-            $HTMLBox = "<table cellspacing='10'>";
+            $HTMLBox = "<table cellspacing='4'>";
             foreach ($nextTermine as $key => $value)
             {
                 $HTMLBox.= "<tr><td>".$key . ":</td><td>";
